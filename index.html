@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dom LAZY 1</title>
+    <script src="https://rawgit.com/Download/polymer-cdn/master/lib/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="https://rawgit.com/Download/polymer-cdn/master/lib/polymer/polymer.html"></script>
+    <link rel="import" href="https://rawgit.com/Download/polymer-cdn/master/lib/paper-input/paper-input.html"></script>
+    <link rel="import" href="dom-lazy-import.html">
+    <style is="custom-style">
+    </style>
+</head>
+
+<body unresolved>
+
+    <template is="dom-bind" id="app">
+        <h2>Lazy import</h2>
+        <div class="content">
+            <label>First Name</label>
+            <paper-input label="normal fname" value={{fname}}></paper-input>
+            <span>{{fname}}</span>
+            <template is="dom-lazy-import">
+                <h3>dom-lazy-import static original content</h3>
+                <span>{{fname}}</span>
+                <div id="items"></div>
+            </template>
+         </div>
+    </template>
+
+    <script>
+        (function (document) {
+            'use strict';
+            var app = document.querySelector('#app');
+            // Sets app default base URL
+            app.baseUrl = '/';
+            app.addEventListener('dom-change', function () {
+                console.log('Our app is ready to rock!');
+            });
+            window.addEventListener('WebComponentsReady', function () {
+                // imports are loaded and elements have been registered
+            });
+        })(document);
+    </script>
+
+</body>

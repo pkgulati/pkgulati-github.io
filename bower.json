@@ -1,0 +1,28 @@
+{
+  "name": "polycontainers",
+  "authors": [
+    "Praveen Gulati <pkgulati@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0",
+    "iron-elements": "PolymerElements/iron-elements#^1.0.0",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.1",
+    "iron-menu-behavior": "PolymerElements/iron-menu-behavior#~1.0.7",
+    "neon-animation": "PolymerElements/neon-animation#^1.1.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "iron-menu-behavior": "^1.1.0"
+  }
+}
