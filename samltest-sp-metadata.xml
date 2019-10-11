@@ -11,5 +11,6 @@
     <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://finacletreasury.com:3000/desktop/logout"/>
     <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
     <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://finacletreasury.com:3000/desktop/login" index="1"/>
+     <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://finacletreasury.com:3000/desktop/login" index="2"/>
   </md:SPSSODescriptor>
 </md:EntityDescriptor>
